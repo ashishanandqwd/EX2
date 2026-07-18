@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>:root{--terracotta:#8B3A2F;--slate:#2E3A34;--gold:#D9A441;--bg:#FAF7F2;--surface:#FFFFFF;--text:#2A2621;--muted:#6B6259;--btn-hover:#6E2E25;}*{box-sizing:border-box;}
+.hh-field input,.hh-field select,.hh-field textarea{width:100%;font-family:Inter,sans-serif;font-size:15px;color:var(--text);background:var(--surface);border:1.5px solid rgba(42,38,33,.16);border-radius:10px;padding:12px 14px;transition:border-color .2s,box-shadow .2s;}
+.hh-field input:focus,.hh-field select:focus,.hh-field textarea:focus{outline:none;border-color:var(--terracotta);box-shadow:0 0 0 3px rgba(139,58,47,.12);}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;}}</style>
+</helmet>
+<div style="background:var(--surface);border:1px solid rgba(42,38,33,.08);border-radius:18px;padding:clamp(24px,3vw,34px);box-shadow:0 8px 30px rgba(42,38,33,.06);">
+  <sc-if value="{{ done }}" hint-placeholder-val="{{ false }}">
+    <div role="status" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:22px 8px;">
+      <div style="width:64px;height:64px;border-radius:50%;background:rgba(18,140,75,.12);display:flex;align-items:center;justify-content:center;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#128C4B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3 style="margin:0;font-family:Fraunces,serif;font-weight:600;font-size:24px;color:var(--text);">Thank you — request received</h3>
+      <p style="margin:0;font-family:Inter,sans-serif;font-size:15px;line-height:1.6;color:var(--muted);max-width:42ch;">We’ll get back to you shortly with a quote. For a faster reply you can also message us directly on WhatsApp.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:6px;">
+        <a ref="{{ waRef }}" href="#" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:#128C4B;color:#fff;font-family:Inter,sans-serif;font-weight:600;font-size:14.5px;text-decoration:none;padding:12px 20px;border-radius:100px;">Continue on WhatsApp</a>
+        <button onClick="{{ reset }}" style="background:none;border:1.5px solid rgba(42,38,33,.18);color:var(--slate);font-family:Inter,sans-serif;font-weight:600;font-size:14.5px;padding:12px 20px;border-radius:100px;cursor:pointer;">Send another</button>
+      </div>
+    </div>
+  </sc-if>
+  <sc-if value="{{ notDone }}" hint-placeholder-val="{{ true }}">
+    <form novalidate onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:18px;">
+      <div class="hh-field">
+        <label for="qf-name" style="display:block;font-family:Inter,sans-serif;font-weight:600;font-size:13.5px;color:var(--text);margin-bottom:7px;">Your name <span style="color:var(--terracotta);">*</span></label>
+        <input id="qf-name" ref="{{ nameRef }}" type="text" name="name" autocomplete="name" placeholder="e.g. Ramesh Kumar">
+        <p ref="{{ nameErrRef }}" style="margin:6px 0 0;font-family:Inter,sans-serif;font-size:12.5px;color:#B4231A;min-height:0;"></p>
+      </div>
+      <div class="hh-field">
+        <label for="qf-phone" style="display:block;font-family:Inter,sans-serif;font-weight:600;font-size:13.5px;color:var(--text);margin-bottom:7px;">Phone number <span style="color:var(--terracotta);">*</span></label>
+        <input id="qf-phone" ref="{{ phoneRef }}" type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="e.g. 98765 43210">
+        <p ref="{{ phoneErrRef }}" style="margin:6px 0 0;font-family:Inter,sans-serif;font-size:12.5px;color:#B4231A;min-height:0;"></p>
+      </div>
+      <div class="hh-field">
+        <label for="qf-req" style="display:block;font-family:Inter,sans-serif;font-weight:600;font-size:13.5px;color:var(--text);margin-bottom:7px;">What do you need? <span style="color:var(--terracotta);">*</span></label>
+        <select id="qf-req" ref="{{ reqRef }}" name="requirement">
+          <option value="">Select a requirement…</option>
+          <sc-for list="{{ options }}" as="opt" hint-placeholder-count="5"><option value="{{ opt }}">{{ opt }}</option></sc-for>
+        </select>
+        <p ref="{{ reqErrRef }}" style="margin:6px 0 0;font-family:Inter,sans-serif;font-size:12.5px;color:#B4231A;min-height:0;"></p>
+      </div>
+      <div class="hh-field">
+        <label for="qf-msg" style="display:block;font-family:Inter,sans-serif;font-weight:600;font-size:13.5px;color:var(--text);margin-bottom:7px;">Message <span style="font-weight:400;color:var(--muted);">(optional)</span></label>
+        <textarea id="qf-msg" ref="{{ msgRef }}" name="message" rows="4" placeholder="Tell us about your project, area, or the products you're looking for."></textarea>
+      </div>
+      <button type="submit" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--terracotta);color:#fff;font-family:Inter,sans-serif;font-weight:600;font-size:16px;border:none;padding:15px;border-radius:100px;cursor:pointer;transition:background .2s,transform .18s;" onMouseEnter="{{ btnEnter }}" onMouseLeave="{{ btnLeave }}">
+        Request a Quote
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+      <p style="margin:0;font-family:Inter,sans-serif;font-size:12px;color:var(--muted);text-align:center;">This is a demo form — submissions are not sent anywhere yet.</p>
+    </form>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;460px&quot;,&quot;height&quot;:&quot;560px&quot;},&quot;whatsappNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;919876543210&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  constructor(p){
+    super(p);
+    this.state={done:false};
+    ['nameRef','phoneRef','reqRef','msgRef','nameErrRef','phoneErrRef','reqErrRef','waRef'].forEach(r=>this[r]=React.createRef());
+  }
+  _err(inputRef,errRef,msg){
+    if(errRef.current) errRef.current.textContent=msg||'';
+    if(inputRef.current) inputRef.current.style.borderColor = msg ? '#B4231A' : 'rgba(42,38,33,.16)';
+  }
+  renderVals(){
+    const wnum = this.props.whatsappNumber ?? '919876543210';
+    return {
+      done: this.state.done,
+      notDone: !this.state.done,
+      nameRef:this.nameRef, phoneRef:this.phoneRef, reqRef:this.reqRef, msgRef:this.msgRef,
+      nameErrRef:this.nameErrRef, phoneErrRef:this.phoneErrRef, reqErrRef:this.reqErrRef, waRef:this.waRef,
+      options: this.props.options ?? ['Tiles','Sanitaryware','Bath fittings','Full home package','Bulk / contractor order','Other'],
+      submit:(e)=>{
+        e.preventDefault();
+        const name=(this.nameRef.current.value||'').trim();
+        const phone=(this.phoneRef.current.value||'').trim();
+        const req=this.reqRef.current.value;
+        const msg=(this.msgRef.current.value||'').trim();
+        let ok=true;
+        if(!name){ this._err(this.nameRef,this.nameErrRef,'Please enter your name.'); ok=false; } else this._err(this.nameRef,this.nameErrRef,'');
+        const digits=phone.replace(/\D/g,'');
+        if(!phone){ this._err(this.phoneRef,this.phoneErrRef,'Please enter a phone number.'); ok=false; }
+        else if(digits.length<10){ this._err(this.phoneRef,this.phoneErrRef,'Please enter a valid phone number.'); ok=false; }
+        else this._err(this.phoneRef,this.phoneErrRef,'');
+        if(!req){ this._err(this.reqRef,this.reqErrRef,'Please choose a requirement.'); ok=false; } else this._err(this.reqRef,this.reqErrRef,'');
+        if(!ok) return;
+        const text='New quote request from '+name+' ('+phone+').\nRequirement: '+req+(msg?('\nMessage: '+msg):'');
+        this._wa='https://wa.me/'+wnum+'?text='+encodeURIComponent(text);
+        this.setState({done:true}, ()=>{ if(this.waRef.current) this.waRef.current.href=this._wa; });
+      },
+      reset:()=>{ this.setState({done:false}); },
+      btnEnter:(e)=>{ e.currentTarget.style.background='var(--btn-hover)'; e.currentTarget.style.transform='translateY(-2px)'; },
+      btnLeave:(e)=>{ e.currentTarget.style.background='var(--terracotta)'; e.currentTarget.style.transform='none'; },
+    };
+  }
+}
+</script>
+</body>
+</html>

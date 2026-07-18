@@ -1,0 +1,24 @@
+/* ============================================================
+   FRAMER — ELEVATION TOKENS
+   On dark, depth = surface lift + a few precise shadow signatures.
+   Color saturation (gradient cards) substitutes for shadow elevation.
+   ============================================================ */
+:root {
+  /* Level 0 — flat: canvas-mounted display type, FAQ rows, footer. No shadow. */
+  --elevation-0: none;
+
+  /* Level 1 — charcoal lift (this is a SURFACE swap to --color-surface-1, no shadow). */
+  --elevation-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+
+  /* Level 2 — light-edge + drop: floating product / modal cards. */
+  --elevation-2: inset 0 0.5px 0 rgba(255, 255, 255, 0.10), 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  /* Level 3 — selected/focus blue ring: focused inputs, selected option. */
+  --elevation-3: 0 0 0 1px rgba(0, 153, 255, 0.15);
+
+  /* Sub-nav active marker: thick near-black outline. */
+  --elevation-active-outline: 0 0 0 2px rgba(0, 0, 0, 0.9);
+
+  /* Focus ring (interactive focus-visible) */
+  --focus-ring: 0 0 0 3px rgba(0, 153, 255, 0.35);
+}

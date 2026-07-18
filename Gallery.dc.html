@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Gallery | Heera Homes — Tiles &amp; Sanitaryware, Chhindwara</title>
+<meta name="description" content="Photo gallery of tiles, sanitaryware, bathroom fittings and showroom displays at Heera Homes (Tiles &amp; Sanitary). Placeholder image slots — drop in real photos.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>
+:root{--terracotta:#8B3A2F;--slate:#2E3A34;--gold:#D9A441;--bg:#FAF7F2;--surface:#FFFFFF;--text:#2A2621;--muted:#6B6259;--btn-hover:#6E2E25;}
+*{box-sizing:border-box;}html{scroll-behavior:smooth;}body{margin:0;background:var(--bg);color:var(--text);}
+a{color:var(--terracotta);}a:hover{color:var(--btn-hover);}
+.hh-galgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));grid-auto-rows:150px;gap:12px;}
+.hh-tall{grid-row:span 2;}
+@media(max-width:640px){.hh-galgrid{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px;gap:10px;}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none!important;animation:none!important;}}
+</style>
+</helmet>
+
+<dc-import name="Nav" hint-size="100%,74px"></dc-import>
+
+<main style="overflow-x:hidden;">
+  <section style="max-width:1240px;margin:0 auto;padding:clamp(40px,5vw,68px) clamp(18px,4vw,40px) clamp(20px,3vw,26px);">
+    <div data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;max-width:640px;">
+      <span style="display:inline-block;font-family:Inter,sans-serif;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--terracotta);background:rgba(139,58,47,.08);padding:7px 14px;border-radius:100px;margin-bottom:18px;">Gallery</span>
+      <h1 style="margin:0 0 16px;font-family:Fraunces,serif;font-weight:600;font-size:clamp(32px,4.6vw,52px);line-height:1.06;letter-spacing:-.01em;color:var(--text);text-wrap:balance;">Recent work &amp; showroom displays</h1>
+      <p style="margin:0;font-family:Inter,sans-serif;font-size:clamp(16px,1.5vw,18px);line-height:1.65;color:var(--muted);">Every tile below is a drop-in image slot — the owner can add real photos. Tap the expand icon to preview an image full-screen.</p>
+    </div>
+  </section>
+
+  <section style="max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,40px);">
+    <div data-reveal style="opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;display:flex;gap:10px;overflow-x:auto;padding-bottom:22px;">
+      <button data-gfilter="all" style="flex:none;font-family:Inter,sans-serif;font-weight:600;font-size:14px;padding:10px 18px;border-radius:100px;border:1.5px solid var(--terracotta);background:var(--terracotta);color:#fff;cursor:pointer;transition:all .2s;">All</button>
+      <button data-gfilter="tiles" style="flex:none;font-family:Inter,sans-serif;font-weight:600;font-size:14px;padding:10px 18px;border-radius:100px;border:1.5px solid rgba(42,38,33,.16);background:#fff;color:var(--slate);cursor:pointer;transition:all .2s;">Tiles</button>
+      <button data-gfilter="bathrooms" style="flex:none;font-family:Inter,sans-serif;font-weight:600;font-size:14px;padding:10px 18px;border-radius:100px;border:1.5px solid rgba(42,38,33,.16);background:#fff;color:var(--slate);cursor:pointer;transition:all .2s;">Bathrooms</button>
+      <button data-gfilter="showroom" style="flex:none;font-family:Inter,sans-serif;font-weight:600;font-size:14px;padding:10px 18px;border-radius:100px;border:1.5px solid rgba(42,38,33,.16);background:#fff;color:var(--slate);cursor:pointer;transition:all .2s;">Showroom</button>
+    </div>
+  </section>
+
+  <section style="max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,40px) clamp(52px,7vw,90px);">
+    <div class="hh-galgrid" data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;">
+      <div data-gtile data-gcat="tiles" class="hh-tall" style="position:relative;border-radius:12px;overflow:hidden;"><image-slot id="gal-1" shape="rect" placeholder="Tile flooring photo" style="width:100%;height:100%;"></image-slot><button data-zoom aria-label="Preview image" style="position:absolute;top:8px;right:8px;width:34px;height:34px;border-radius:50%;border:none;background:rgba(20,16,12,.55);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
+      <div data-gtile data-gcat="bathrooms" style="position:relative;border-radius:12px;overflow:hidden;"><image-slot id="gal-2" shape="rect" placeholder="Bathroom photo" style="width:100%;height:100%;"></image-slot><button data-zoom aria-label="Preview image" style="position:absolute;top:8px;right:8px;width:34px;height:34px;border-radius:50%;border:none;background:rgba(20,16,12,.55);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
+      <div data-gtile data-gcat="showroom" style="position:relative;border-radius:12px;overflow:hidden;"><image-slot id="gal-3" shape="rect" placeholder="Showroom photo" style="width:100%;height:100%;"></image-slot><button data-zoom aria-label="Preview image" style="position:absolute;top:8px;right:8px;width:34px;height:34px;border-radius:50%;border:none;background:rgba(20,16,12,.55);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
+      <div data-gtile data-gcat="tiles" style="position:relative;border-radius:12px;overflow:hidden;"><image-slot id="gal-4" shape="rect" placeholder="Tile pattern photo" style="width:100%;height:100%;"></image-slot><button data-zoom aria-label="Preview image" style="position:absolute;top:8px;right:8px;width:34px;height:34px;border-radius:50%;border:none;background:rgba(20,16,12,.55);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
+      <div data-gtile data-gcat="bathrooms" class="hh-tall" style="position:relative;border-radius:12px;overflow:hidden;"><image-slot id="gal-5" shape="rect" placeholder="Bathroom fittings photo" style="width:100%;height:100%;"></image-slot><button data-zoom aria-label="Preview image" style="position:absolute;top:8px;right:8px;width:34px;height:34px;border-radius:50%;border:none;background:rgba(20,16,12,.55);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
+      <div data-gtile data-gcat="showroom" style="position:relative;border-radius:12px;overflow:hidden;"><image-slot id="gal-6" shape="rect" placeholder="Showroom display photo" style="width:100%;height:100%;"></image-slot><button data-zoom aria-label="Preview image" style="position:absolute;top:8px;right:8px;width:34px;height:34px;border-radius:50%;border:none;background:rgba(20,16,12,.55);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
+      <div data-gtile data-gcat="tiles" style="position:relative;border-radius:12px;overflow:hidden;"><image-slot id="gal-7" shape="rect" placeholder="Wall tile photo" style="width:100%;height:100%;"></image-slot><button data-zoom aria-label="Preview image" style="position:absolute;top:8px;right:8px;width:34px;height:34px;border-radius:50%;border:none;background:rgba(20,16,12,.55);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
+      <div data-gtile data-gcat="bathrooms" style="position:relative;border-radius:12px;overflow:hidden;"><image-slot id="gal-8" shape="rect" placeholder="Modern bathroom photo" style="width:100%;height:100%;"></image-slot><button data-zoom aria-label="Preview image" style="position:absolute;top:8px;right:8px;width:34px;height:34px;border-radius:50%;border:none;background:rgba(20,16,12,.55);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
+      <div data-gtile data-gcat="showroom" class="hh-tall" style="position:relative;border-radius:12px;overflow:hidden;"><image-slot id="gal-9" shape="rect" placeholder="Sanitaryware display photo" style="width:100%;height:100%;"></image-slot><button data-zoom aria-label="Preview image" style="position:absolute;top:8px;right:8px;width:34px;height:34px;border-radius:50%;border:none;background:rgba(20,16,12,.55);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
+      <div data-gtile data-gcat="tiles" style="position:relative;border-radius:12px;overflow:hidden;"><image-slot id="gal-10" shape="rect" placeholder="Vitrified tile photo" style="width:100%;height:100%;"></image-slot><button data-zoom aria-label="Preview image" style="position:absolute;top:8px;right:8px;width:34px;height:34px;border-radius:50%;border:none;background:rgba(20,16,12,.55);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
+      <div data-gtile data-gcat="bathrooms" style="position:relative;border-radius:12px;overflow:hidden;"><image-slot id="gal-11" shape="rect" placeholder="Bath fitting photo" style="width:100%;height:100%;"></image-slot><button data-zoom aria-label="Preview image" style="position:absolute;top:8px;right:8px;width:34px;height:34px;border-radius:50%;border:none;background:rgba(20,16,12,.55);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
+      <div data-gtile data-gcat="showroom" style="position:relative;border-radius:12px;overflow:hidden;"><image-slot id="gal-12" shape="rect" placeholder="Storefront photo" style="width:100%;height:100%;"></image-slot><button data-zoom aria-label="Preview image" style="position:absolute;top:8px;right:8px;width:34px;height:34px;border-radius:50%;border:none;background:rgba(20,16,12,.55);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></button></div>
+    </div>
+  </section>
+</main>
+
+<div ref="{{ lbRef }}" style="position:fixed;inset:0;z-index:300;background:rgba(16,12,9,.92);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s ease;padding:24px;">
+  <button aria-label="Close preview" onClick="{{ close }}" style="position:absolute;top:18px;right:18px;width:46px;height:46px;border-radius:50%;border:none;background:rgba(255,255,255,.14);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  <button aria-label="Previous" onClick="{{ prev }}" style="position:absolute;left:18px;top:50%;transform:translateY(-50%);width:50px;height:50px;border-radius:50%;border:none;background:rgba(255,255,255,.14);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+  <button aria-label="Next" onClick="{{ next }}" style="position:absolute;right:18px;top:50%;transform:translateY(-50%);width:50px;height:50px;border-radius:50%;border:none;background:rgba(255,255,255,.14);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+  <img ref="{{ lbImgRef }}" alt="Enlarged gallery image preview" style="max-width:88vw;max-height:80vh;border-radius:12px;object-fit:contain;opacity:1;transition:opacity .22s ease;display:none;">
+  <div ref="{{ lbEmptyRef }}" style="display:flex;flex-direction:column;align-items:center;gap:12px;color:#C7BEB0;text-align:center;">
+    <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+    <span style="font-family:Inter,sans-serif;font-size:15px;">This slot is empty — drop a photo into the tile to preview it here.</span>
+  </div>
+  <div ref="{{ lbCounterRef }}" style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);font-family:Inter,sans-serif;font-size:13px;color:#C7BEB0;background:rgba(255,255,255,.1);padding:6px 14px;border-radius:100px;"></div>
+</div>
+
+<dc-import name="Footer" hint-size="100%,460px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  constructor(p){ super(p); ['lbRef','lbImgRef','lbEmptyRef','lbCounterRef'].forEach(r=>this[r]=React.createRef()); this._i=0; }
+  _slotSrc(tile){
+    const s=tile.querySelector('image-slot');
+    if(!s||!s.shadowRoot) return null;
+    const im=s.shadowRoot.querySelector('[part=image]');
+    if(im && im.getAttribute('src') && im.style.display!=='none') return im.getAttribute('src');
+    return null;
+  }
+  _visible(){ return this._tiles.filter(t=>t.style.display!=='none'); }
+  _render(i){
+    const vis=this._visible(); if(!vis.length) return;
+    this._i=(i+vis.length)%vis.length;
+    const src=this._slotSrc(vis[this._i]);
+    const img=this.lbImgRef.current, empty=this.lbEmptyRef.current, ctr=this.lbCounterRef.current;
+    img.style.opacity='0';
+    setTimeout(()=>{
+      if(src){ img.src=src; img.style.display='block'; empty.style.display='none'; }
+      else { img.style.display='none'; img.removeAttribute('src'); empty.style.display='flex'; }
+      img.style.opacity='1';
+    }, this._reduced?0:170);
+    ctr.textContent=(this._i+1)+' / '+vis.length;
+  }
+  _open(tile){
+    const vis=this._visible(); const idx=vis.indexOf(tile); if(idx<0) return;
+    this.lbRef.current.style.opacity='1'; this.lbRef.current.style.pointerEvents='auto';
+    document.body.style.overflow='hidden';
+    this._render(idx);
+  }
+  componentDidMount(){
+    this._reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const els=[...document.querySelectorAll('[data-reveal]')];
+    if(this._reduced){ els.forEach(e=>{e.style.opacity='1';e.style.transform='none';}); }
+    else {
+      const io=new IntersectionObserver((ents)=>{ents.forEach(en=>{if(en.isIntersecting){en.target.style.opacity='1';en.target.style.transform='none';io.unobserve(en.target);}})},{threshold:0.08});
+      els.forEach(e=>io.observe(e));
+    }
+    this._tiles=[...document.querySelectorAll('[data-gtile]')];
+    this._tiles.forEach(tile=>{
+      tile.addEventListener('mouseenter',()=>{ const b=tile.querySelector('[data-zoom]'); if(b) b.style.opacity='1'; });
+      tile.addEventListener('mouseleave',()=>{ const b=tile.querySelector('[data-zoom]'); if(b) b.style.opacity='0'; });
+      const zb=tile.querySelector('[data-zoom]');
+      if(zb) zb.addEventListener('click',(e)=>{ e.stopPropagation(); this._open(tile); });
+    });
+    // filter
+    const pills=[...document.querySelectorAll('[data-gfilter]')];
+    pills.forEach(btn=>btn.addEventListener('click',()=>{
+      const f=btn.dataset.gfilter;
+      pills.forEach(p=>{ const on=p===btn; p.style.background=on?'var(--terracotta)':'#fff'; p.style.color=on?'#fff':'var(--slate)'; p.style.borderColor=on?'var(--terracotta)':'rgba(42,38,33,.16)'; });
+      this._tiles.forEach(t=>{ t.style.display=(f==='all'||t.dataset.gcat===f)?'':'none'; });
+    }));
+    // keyboard
+    this._onKey=(e)=>{
+      if(this.lbRef.current.style.opacity!=='1') return;
+      if(e.key==='Escape') this._close();
+      else if(e.key==='ArrowLeft') this._render(this._i-1);
+      else if(e.key==='ArrowRight') this._render(this._i+1);
+    };
+    window.addEventListener('keydown', this._onKey);
+  }
+  componentWillUnmount(){ window.removeEventListener('keydown', this._onKey); }
+  _close(){ this.lbRef.current.style.opacity='0'; this.lbRef.current.style.pointerEvents='none'; document.body.style.overflow=''; }
+  renderVals(){
+    return {
+      lbRef:this.lbRef, lbImgRef:this.lbImgRef, lbEmptyRef:this.lbEmptyRef, lbCounterRef:this.lbCounterRef,
+      close:()=>this._close(),
+      prev:()=>this._render(this._i-1),
+      next:()=>this._render(this._i+1),
+    };
+  }
+}
+</script>
+</body>
+</html>

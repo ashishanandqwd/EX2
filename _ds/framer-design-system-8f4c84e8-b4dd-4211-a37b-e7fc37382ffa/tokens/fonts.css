@@ -1,0 +1,4 @@
+/* Framer webfonts.
+   GT Walsheim (display) is proprietary and not shipped here — substituted with
+   Mona Sans per the brand spec's recommended fallback. Inter is the real body face. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');

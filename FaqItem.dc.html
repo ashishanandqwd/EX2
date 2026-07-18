@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>:root{--terracotta:#8B3A2F;--slate:#2E3A34;--gold:#D9A441;--bg:#FAF7F2;--surface:#FFFFFF;--text:#2A2621;--muted:#6B6259;}*{box-sizing:border-box;}@media(prefers-reduced-motion:reduce){*{transition:none!important;}}</style>
+</helmet>
+<div style="border-bottom:1px solid rgba(42,38,33,.1);">
+  <button aria-expanded="false" onClick="{{ toggle }}" style="width:100%;display:flex;justify-content:space-between;gap:18px;align-items:center;background:none;border:none;cursor:pointer;padding:22px 2px;text-align:left;">
+    <span data-editable="q" style="font-family:Fraunces,serif;font-weight:500;font-size:clamp(16.5px,1.7vw,19px);color:var(--text);line-height:1.35;">{{ q }}</span>
+    <span ref="{{ iconRef }}" style="flex:none;width:30px;height:30px;border-radius:50%;background:rgba(139,58,47,.09);color:var(--terracotta);display:inline-flex;align-items:center;justify-content:center;transition:transform .3s ease,background .2s ease;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </span>
+  </button>
+  <div ref="{{ panelRef }}" style="max-height:0;overflow:hidden;transition:max-height .38s cubic-bezier(.4,0,.15,1);">
+    <p data-editable="a" style="margin:0;padding:0 2px 24px;font-family:Inter,sans-serif;font-size:15.5px;line-height:1.7;color:var(--muted);max-width:68ch;">{{ a }}</p>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;720px&quot;,&quot;height&quot;:&quot;80px&quot;},&quot;q&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Question goes here?&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;a&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Answer goes here.&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  constructor(p){ super(p); this.panelRef=React.createRef(); this.iconRef=React.createRef(); this._open=false; }
+  renderVals(){
+    return {
+      q: this.props.q ?? 'Question goes here?',
+      a: this.props.a ?? 'Answer goes here.',
+      toggle: (e)=>{
+        this._open=!this._open;
+        const pl=this.panelRef.current, ic=this.iconRef.current, btn=e.currentTarget;
+        if(this._open){ pl.style.maxHeight=pl.scrollHeight+'px'; ic.style.transform='rotate(180deg)'; ic.style.background='var(--terracotta)'; ic.style.color='#fff'; btn.setAttribute('aria-expanded','true'); }
+        else { pl.style.maxHeight='0'; ic.style.transform='none'; ic.style.background='rgba(139,58,47,.09)'; ic.style.color='var(--terracotta)'; btn.setAttribute('aria-expanded','false'); }
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

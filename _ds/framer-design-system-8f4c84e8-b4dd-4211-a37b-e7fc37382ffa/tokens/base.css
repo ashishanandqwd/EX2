@@ -1,0 +1,34 @@
+/* ============================================================
+   FRAMER — BASE
+   Global resets + the Inter OpenType voice applied to the document.
+   ============================================================ */
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--type-body-size);
+  line-height: var(--type-body-line);
+  letter-spacing: var(--type-body-track);
+  font-weight: var(--weight-body);
+  /* The brand voice — Inter character variants everywhere body type appears. */
+  font-feature-settings: var(--font-features);
+}
+
+::selection {
+  background: rgba(0, 153, 255, 0.30);
+  color: #fff;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--link-color-hover);
+}

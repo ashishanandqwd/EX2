@@ -1,0 +1,19 @@
+/* ============================================================
+   FRAMER — SPACING TOKENS
+   Non-standard 5px base (5/10/15/20/30 increments), not 4/8/16.
+   ============================================================ */
+:root {
+  --space-hair: 1px;
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 15px;
+  --space-lg: 20px;
+  --space-xl: 30px;
+  --space-xxl: 40px;
+  --space-section: 96px;   /* vertical section rhythm on home */
+
+  /* Container */
+  --container-max: 1199px;
+  --container-gutter: 30px;
+}

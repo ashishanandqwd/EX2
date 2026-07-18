@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>About Us | Heera Homes — Tiles &amp; Sanitaryware, Chhindwara</title>
+<meta name="description" content="Learn about Heera Homes (Tiles &amp; Sanitary), a local tiles, sanitaryware and bath-fittings showroom serving homeowners, contractors and builders in the Chhindwara district.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>
+:root{--terracotta:#8B3A2F;--slate:#2E3A34;--gold:#D9A441;--bg:#FAF7F2;--surface:#FFFFFF;--text:#2A2621;--muted:#6B6259;--btn-hover:#6E2E25;}
+*{box-sizing:border-box;}html{scroll-behavior:smooth;}body{margin:0;background:var(--bg);color:var(--text);}
+a{color:var(--terracotta);}a:hover{color:var(--btn-hover);}
+.hh-2col{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px);align-items:center;}
+.hh-3col{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.hh-4col{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+@media(max-width:980px){.hh-4col{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:860px){.hh-2col{grid-template-columns:1fr;}.hh-3col{grid-template-columns:1fr;}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none!important;animation:none!important;}}
+</style>
+</helmet>
+
+<dc-import name="Nav" hint-size="100%,74px"></dc-import>
+
+<main style="overflow-x:hidden;">
+  <!-- HERO -->
+  <section style="max-width:1240px;margin:0 auto;padding:clamp(44px,6vw,80px) clamp(18px,4vw,40px);">
+    <div class="hh-2col">
+      <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;">
+        <span style="display:inline-block;font-family:Inter,sans-serif;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--terracotta);background:rgba(139,58,47,.08);padding:7px 14px;border-radius:100px;margin-bottom:20px;">About us</span>
+        <h1 style="margin:0 0 18px;font-family:Fraunces,serif;font-weight:600;font-size:clamp(32px,4.6vw,54px);line-height:1.06;letter-spacing:-.01em;color:var(--text);text-wrap:balance;">A local showroom built around getting the details right</h1>
+        <p style="margin:0;font-family:Inter,sans-serif;font-size:clamp(16px,1.5vw,18.5px);line-height:1.7;color:var(--muted);max-width:52ch;">Heera Homes (Tiles &amp; Sanitary) is a family-run showroom in the Chhindwara district. We stock tiles, sanitaryware and bath fittings, and we take the time to help each customer choose materials that fit the space, the budget and the job. <em>(All history below is placeholder text — edit with your real story.)</em></p>
+      </div>
+      <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease;border-radius:20px;overflow:hidden;box-shadow:0 22px 54px rgba(42,38,33,.14);aspect-ratio:4/3;">
+        <image-slot id="about-hero" shape="rect" placeholder="Drop a showroom / storefront photo" style="width:100%;height:100%;"></image-slot>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section style="background:#fff;border-top:1px solid rgba(42,38,33,.06);border-bottom:1px solid rgba(42,38,33,.06);">
+    <div style="max-width:1240px;margin:0 auto;padding:clamp(52px,7vw,92px) clamp(18px,4vw,40px);">
+      <div class="hh-2col" data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;">
+        <div role="img" aria-label="Placeholder photo of tile displays inside the Heera Homes showroom" style="aspect-ratio:5/4;border-radius:20px;position:relative;overflow:hidden;background:linear-gradient(135deg,#E7DCCD,#CDB89F);box-shadow:0 16px 40px rgba(42,38,33,.1);">
+          <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.2) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.2) 1px,transparent 1px);background-size:44px 44px;"></div>
+          <span style="position:absolute;left:14px;bottom:12px;font-family:Inter,sans-serif;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:rgba(42,38,33,.55);background:rgba(255,255,255,.78);padding:5px 9px;border-radius:6px;">Showroom photo placeholder</span>
+        </div>
+        <div>
+          <span style="font-family:Inter,sans-serif;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);">Our story</span>
+          <h2 style="margin:12px 0 16px;font-family:Fraunces,serif;font-weight:600;font-size:clamp(25px,3.2vw,38px);line-height:1.14;color:var(--text);">Serving the district, one home at a time</h2>
+          <p data-editable="story1" style="margin:0 0 16px;font-family:Inter,sans-serif;font-size:16px;line-height:1.72;color:var(--muted);">Placeholder story paragraph. Describe how the business started, who runs it, and what you focus on. Keep the tone clear and direct — no exaggerated claims.</p>
+          <p data-editable="story2" style="margin:0;font-family:Inter,sans-serif;font-size:16px;line-height:1.72;color:var(--muted);">A second placeholder paragraph for more detail — for example, the kinds of projects you help with and why customers come back.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section style="max-width:1240px;margin:0 auto;padding:clamp(52px,7vw,92px) clamp(18px,4vw,40px);">
+    <div data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;text-align:center;max-width:620px;margin:0 auto 44px;">
+      <span style="font-family:Inter,sans-serif;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);">What we value</span>
+      <h2 style="margin:12px 0 0;font-family:Fraunces,serif;font-weight:600;font-size:clamp(26px,3.4vw,40px);line-height:1.1;color:var(--text);">How we like to work</h2>
+    </div>
+    <div class="hh-4col" data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;">
+      <div style="background:#fff;border:1px solid rgba(42,38,33,.07);border-radius:16px;padding:26px;">
+        <div style="width:50px;height:50px;border-radius:13px;background:rgba(139,58,47,.1);display:flex;align-items:center;justify-content:center;margin-bottom:15px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B3A2F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h3 style="margin:0 0 8px;font-family:Fraunces,serif;font-weight:600;font-size:18px;color:var(--text);">Honest advice</h3>
+        <p style="margin:0;font-family:Inter,sans-serif;font-size:14.5px;line-height:1.6;color:var(--muted);">We recommend what suits your project — not just what's on the shelf.</p>
+      </div>
+      <div style="background:#fff;border:1px solid rgba(42,38,33,.07);border-radius:16px;padding:26px;">
+        <div style="width:50px;height:50px;border-radius:13px;background:rgba(217,164,65,.16);display:flex;align-items:center;justify-content:center;margin-bottom:15px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B98A2E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <h3 style="margin:0 0 8px;font-family:Fraunces,serif;font-weight:600;font-size:18px;color:var(--text);">Range &amp; quality</h3>
+        <p style="margin:0;font-family:Inter,sans-serif;font-size:14.5px;line-height:1.6;color:var(--muted);">A broad selection across price points, so there's a fit for every budget.</p>
+      </div>
+      <div style="background:#fff;border:1px solid rgba(42,38,33,.07);border-radius:16px;padding:26px;">
+        <div style="width:50px;height:50px;border-radius:13px;background:rgba(46,58,52,.1);display:flex;align-items:center;justify-content:center;margin-bottom:15px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2E3A34" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3 style="margin:0 0 8px;font-family:Fraunces,serif;font-weight:600;font-size:18px;color:var(--text);">Local service</h3>
+        <p style="margin:0;font-family:Inter,sans-serif;font-size:14.5px;line-height:1.6;color:var(--muted);">Rooted in the district, with delivery options for larger orders.</p>
+      </div>
+      <div style="background:#fff;border:1px solid rgba(42,38,33,.07);border-radius:16px;padding:26px;">
+        <div style="width:50px;height:50px;border-radius:13px;background:rgba(139,58,47,.1);display:flex;align-items:center;justify-content:center;margin-bottom:15px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8B3A2F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg></div>
+        <h3 style="margin:0 0 8px;font-family:Fraunces,serif;font-weight:600;font-size:18px;color:var(--text);">Support through the job</h3>
+        <p style="margin:0;font-family:Inter,sans-serif;font-size:14.5px;line-height:1.6;color:var(--muted);">From selection to delivery, we're here if questions come up.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE HELP -->
+  <section style="background:#fff;border-top:1px solid rgba(42,38,33,.06);">
+    <div style="max-width:1240px;margin:0 auto;padding:clamp(52px,7vw,90px) clamp(18px,4vw,40px);">
+      <div data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;max-width:620px;margin-bottom:40px;">
+        <span style="font-family:Inter,sans-serif;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);">Who we help</span>
+        <h2 style="margin:12px 0 0;font-family:Fraunces,serif;font-weight:600;font-size:clamp(26px,3.4vw,40px);line-height:1.1;color:var(--text);">Built for every kind of project</h2>
+      </div>
+      <div class="hh-3col" data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;">
+        <div style="background:var(--bg);border-radius:16px;padding:30px;border:1px solid rgba(42,38,33,.06);">
+          <h3 style="margin:0 0 10px;font-family:Fraunces,serif;font-weight:600;font-size:21px;color:var(--terracotta);">Homeowners</h3>
+          <p style="margin:0;font-family:Inter,sans-serif;font-size:15px;line-height:1.65;color:var(--muted);">Planning a new home or a renovation? We'll help you choose finishes you'll be happy with for years.</p>
+        </div>
+        <div style="background:var(--bg);border-radius:16px;padding:30px;border:1px solid rgba(42,38,33,.06);">
+          <h3 style="margin:0 0 10px;font-family:Fraunces,serif;font-weight:600;font-size:21px;color:var(--terracotta);">Contractors</h3>
+          <p style="margin:0;font-family:Inter,sans-serif;font-size:15px;line-height:1.65;color:var(--muted);">Reliable stock, straightforward pricing and delivery that keeps your site moving.</p>
+        </div>
+        <div style="background:var(--bg);border-radius:16px;padding:30px;border:1px solid rgba(42,38,33,.06);">
+          <h3 style="margin:0 0 10px;font-family:Fraunces,serif;font-weight:600;font-size:21px;color:var(--terracotta);">Builders</h3>
+          <p style="margin:0;font-family:Inter,sans-serif;font-size:15px;line-height:1.65;color:var(--muted);">Bulk orders and repeat supply for multiple units — ask us about project pricing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="max-width:1240px;margin:0 auto;padding:clamp(52px,7vw,90px) clamp(18px,4vw,40px);">
+    <div data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;background:var(--terracotta);border-radius:24px;padding:clamp(38px,6vw,64px);text-align:center;">
+      <h2 style="margin:0 0 14px;font-family:Fraunces,serif;font-weight:600;font-size:clamp(26px,3.6vw,42px);line-height:1.08;color:#fff;">Come see the range in person</h2>
+      <p style="margin:0 auto 26px;font-family:Inter,sans-serif;font-size:clamp(15px,1.5vw,18px);line-height:1.6;color:#F3E4DF;max-width:50ch;">Visit the showroom, or reach out and we'll help you get started.</p>
+      <div style="display:flex;gap:13px;flex-wrap:wrap;justify-content:center;">
+        <a href="tel:+919876543210" style="display:inline-flex;align-items:center;gap:9px;background:#fff;color:var(--terracotta);font-family:Inter,sans-serif;font-weight:600;font-size:16px;text-decoration:none;padding:15px 26px;border-radius:100px;">Call Us Now</a>
+        <a href="Contact.dc.html" style="display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.4);font-family:Inter,sans-serif;font-weight:600;font-size:16px;text-decoration:none;padding:14px 24px;border-radius:100px;">Contact &amp; Directions</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<dc-import name="Footer" hint-size="100%,460px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount(){
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const els=[...document.querySelectorAll('[data-reveal]')];
+    if(reduced){ els.forEach(e=>{e.style.opacity='1';e.style.transform='none';}); return; }
+    const io=new IntersectionObserver((ents)=>{ents.forEach(en=>{if(en.isIntersecting){en.target.style.opacity='1';en.target.style.transform='none';io.unobserve(en.target);}})},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
+    els.forEach(e=>io.observe(e));
+  }
+  renderVals(){ return {}; }
+}
+</script>
+</body>
+</html>

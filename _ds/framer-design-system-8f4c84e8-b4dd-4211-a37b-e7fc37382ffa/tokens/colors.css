@@ -1,0 +1,45 @@
+/* ============================================================
+   FRAMER — COLOR TOKENS
+   Dark-only marketing system: two anchor surfaces (white + near-black),
+   one chromatic accent (sky blue), one semantic (green), and the
+   signature gradient-spotlight family. No light mode.
+   ============================================================ */
+:root {
+  /* --- Brand & Accent --- */
+  --color-primary: #FFFFFF;          /* brand primary surface: CTA pills, display type */
+  --color-on-primary: #0A0A0A;       /* text/glyphs sitting ON a white pill */
+  --color-accent-blue: #0099FF;      /* single chromatic accent: links, focus, selection */
+
+  /* --- Surface (lift ramp on dark) --- */
+  --color-canvas: #0A0A0A;           /* near-black w/ faint warmth: page ground */
+  --color-surface-1: #191919;        /* one step up: pricing cards, secondary pills, tiles */
+  --color-surface-2: #262626;        /* two steps up: featured card, selected tab, hero pill */
+  --color-inverse-canvas: #FFFFFF;   /* pure white surface (light pill face, light thumbs) */
+
+  /* --- Hairlines --- */
+  --color-hairline: rgba(255, 255, 255, 0.14);       /* 1px input & table borders */
+  --color-hairline-soft: rgba(255, 255, 255, 0.07);  /* subtler FAQ / footer dividers */
+
+  /* --- Text --- */
+  --color-ink: #FFFFFF;              /* headlines + emphasized body */
+  --color-ink-muted: #999999;        /* secondary type: meta, footer, deselected tabs */
+
+  /* --- Semantic --- */
+  --color-semantic-success: #30D158; /* comparison-table checkmark glyphs */
+
+  /* --- Gradient spotlight anchors (base hexes; production gradients are per-element) --- */
+  --color-gradient-magenta: #E83FA0;
+  --color-gradient-violet:  #7C4DFF;
+  --color-gradient-orange:  #FF7A3D;
+  --color-gradient-coral:   #FF5C7A;
+
+  /* Ready-to-use spotlight gradient strings (atmospheric, radial-spotlight feel) */
+  --gradient-violet:  radial-gradient(120% 120% at 22% 12%, #A78BFA 0%, #7C4DFF 38%, #4318B8 100%); /* @kind color */
+  --gradient-magenta: radial-gradient(120% 120% at 25% 10%, #FF7AC6 0%, #E83FA0 40%, #8E1E63 100%); /* @kind color */
+  --gradient-orange:  radial-gradient(120% 120% at 20% 8%,  #FFC46B 0%, #FF7A3D 42%, #C8391A 100%); /* @kind color */
+  --gradient-coral:   radial-gradient(120% 120% at 24% 12%, #FF97AE 0%, #FF5C7A 42%, #C42B57 100%); /* @kind color */
+
+  /* --- Link default (consumers rely on these) --- */
+  --link-color: var(--color-accent-blue);
+  --link-color-hover: #47B4FF;
+}
